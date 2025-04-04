@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- To use react use the below CDN link -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+    <!-- learning REact -->
+    <!-- javascript Dom vs React Dom  -->
+    <!-- Creating a h1 tag using Dom -->
+
+    <div id="normal-root"></div>
+    <div id="react-root"></div>
+
+    <script type="text/javascript">
+    //  javascript Dom
+
+    let root = document.getElementById("normal-root");
+    let h1=document.createElement("h1");
+    h1.innerText="Hello World From Javascript Dom";
+    root.appendChild(h1);
+
+    </script>
+    <script type="text/jsx">
+       
+        let root1 = document.getElementById("react-root");
+        ReactDOM.render(<h1>Hello World From React Dom</h1>, root1);
+
+
+    </script>
+</body>
+</html>
