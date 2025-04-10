@@ -1,6 +1,6 @@
 function Welcome(props){
 
-    console.log();
+    console.log(props);
     
 return(
     <div>
