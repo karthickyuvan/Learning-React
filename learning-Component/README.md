@@ -1,66 +1,12 @@
-Create Components in VS Code
+# React + Vite
 
-Step 1: Open VS Code & Create React App
-npx create-react-app my-app
-cd my-app
-code .
-npm start
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Step 2: Create a New Component File
-Inside your project:
-Go to src/
-Right click → New Folder → name it components
-Inside components/ → New File → Header.jsx,Footer.jsx,Content.jsx
+Currently, two official plugins are available:
 
-Step 3: Write Your Functional Component
-// src/components/Header.jsx
-function Header() {
-  return (
-    <div>
-      <h1>This is the Header Component</h1>
-    </div>
-  );
-}
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-export default Header;
-🔚 export default Header; → Important! So we can use it in App.jsx.
+## Expanding the ESLint configuration
 
-Step 4: Use That Component in App.js
-Go to src/App.js and import the component.
-import Header from './components/Header'; // import pannanum
-
-function App() {
-  return (
-    <div>
-      <Header /> {/* Custom tag like HTML tag */}
-      <p>This is App Component</p>
-    </div>
-  );
-}
-
-export default App;
-
-Step 5: Start the App
-npm start
-
-Step 6: Add Multiple Components
-// src/components/Footer.jsx
-function Footer() {
-  return <p>© 2025 VJ Kudos</p>;
-}
-
-export default Footer;
-
-Then import and use it in App.jsx
-
-import Footer from './components/Footer';
-
-function App() {
-  return (
-    <div>
-      <Header />
-      <p>This is App Component</p>
-      <Footer />
-    </div>
-  );
-}
+If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
