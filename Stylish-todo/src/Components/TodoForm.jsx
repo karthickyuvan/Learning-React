@@ -8,15 +8,15 @@ function TodoForm({ todos, setTodos, showModal, setShowModal }) {
 
     const newTask = {
       id: Date.now(), // Unique ID
-      text: task,
+      text: task, // 👉 this is "Buy Milk"
       completed: false,
       time: new Date().toLocaleTimeString(),
       date: new Date().toLocaleDateString()
     };
 
-    setTodos([newTask, ...todos]); // New task add pannrom
-    setTask(""); // Clear input
-    setShowModal(false); // Close modal
+    setTodos([newTask, ...todos]); // New task add pannrom // 🔁 Updates state in App.jsx
+    setTask(""); // Clear input 
+    setShowModal(false); // Close modal  // ❌ hides popup
   };
 
   if (!showModal) return null; // Modal close state na return pannadhu
@@ -24,8 +24,7 @@ function TodoForm({ todos, setTodos, showModal, setShowModal }) {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <h3>Add a New Task</h3>
-        
+        <h3>Add a New Task</h3> 
         {/* Input field */}
         <input
           type="text"
