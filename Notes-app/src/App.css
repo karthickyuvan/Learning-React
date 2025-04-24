@@ -1,0 +1,176 @@
+.add-btn
+{
+    background-color: aquamarine;
+    border: none;
+    border-radius: 50%;
+    font-size: 55px;
+    height:100px;
+    width: 100px;
+    padding: 12px 24px;
+    cursor: pointer;
+    margin-top: 360px;
+    margin-left: 1225px;
+    position: fixed;
+}
+
+  .note-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* space between cards */
+    padding: 20px;
+  }
+  .note-card {
+    width: 25%;         /* This makes each note take 1/4th of the row */
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  /* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  
+  .modal-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 300px;
+    max-width: 90%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+  
+  .modal-buttons button {
+    background-color: aquamarine;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+  
+  .modal-content input {
+    width: 90%;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .modal-content textarea {
+    width: 90%;
+    padding: 1rem;
+    margin-top: 1rem;
+    height: 100px;
+  }
+  
+  .note-item {
+    background: linear-gradient(145deg, #8bc6ec, #58BD95);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    width: 22%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .note-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+  
+  .edit-btn, .delete-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .edit-btn:hover {
+    background-color: #ff5a4f;
+  }
+  
+  .delete-btn {
+    background-color: #2d3436;
+  }
+  
+  .delete-btn:hover {
+    background-color: #212f36;
+  }
+  
+  @media (max-width: 768px) {
+    .note-item {
+      width: 48%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .note-item {
+      width: 100%;
+    }
+  }
+  /* Content of the note */
+.note-content {
+    font-size: 1.1rem;
+    color: #194d81;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-family: 'Georgia', serif;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+    max-height: 150px; /* Set max height for content */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    word-wrap: break-word; /* Ensure long words don't overflow */
+  }
+  
+  .note-content:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+  /* Style for the search bar */
+/* Center the search bar horizontally */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px; /* Optional, add some space at the bottom */
+}
+
+/* Style for the search input */
+.search-bar input {
+  width: 50%;  /* Adjust the width of the search input */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;  /* Ensure padding is included in width calculation */
+}
+

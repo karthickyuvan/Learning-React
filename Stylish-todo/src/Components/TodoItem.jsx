@@ -50,12 +50,12 @@ function TodoItem({ todo, todos, setTodos }) {
     <div className={`todo-item ${todo.completed ? "done" : ""}`}>
   
       {/* Complete checkbox */}
-      // Shows a checkbox. Checked = true if task is completed.
-      // When checkbox is clicked, it triggers handleToggle (to mark complete/incomplete)
+      {/* // Shows a checkbox. Checked = true if task is completed.
+      // When checkbox is clicked, it triggers handleToggle (to mark complete/incomplete) */}
       <input type="checkbox" checked={todo.completed} onChange={handleToggle} />
   
       {/* Edit or display mode */}
-      // If 'edit' is true, show an input field to edit the text
+      {/* // If 'edit' is true, show an input field to edit the text */}
       {edit ? (
         <input 
           value={text} // Controlled input — its value is managed by state
@@ -74,10 +74,10 @@ function TodoItem({ todo, todos, setTodos }) {
   
       {/* Action buttons */}
       <div className="actions">
-        // Trash button — deletes the task when clicked
+        {/* // Trash button — deletes the task when clicked */}
         <button onClick={handleDelete}>🗑️</button>
   
-        // Edit button — toggles the 'edit' state on/off
+        {/* // Edit button — toggles the 'edit' state on/off */}
         <button onClick={() => setEdit(!edit)}>✏️</button>
       </div>
   
