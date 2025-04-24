@@ -5,13 +5,7 @@ function NoteItem({ note, notes, setNotes }) {
   const [title, setTitle] = useState(note.title); // Edit title
   const [content, setContent] = useState(note.content); // Edit content
 
-  // Toggle completed (for checking or unchecking a note)
-  const handleToggle = () => {
-    const updatedNotes = notes.map(n =>
-      n.id === note.id ? { ...n, completed: !n.completed } : n
-    );
-    setNotes(updatedNotes);
-  };
+
 
   // Delete note with confirmation
   const handleDelete = () => {
